@@ -4,7 +4,6 @@
 
 int main() 
 {
-	
-	DECODINGFUNCTION();
-return 0;
+  DECODINGFUNCTION();
+    return 0;
 }
