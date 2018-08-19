@@ -6,14 +6,14 @@
 #include <math.h>
 #include "Core.h"
 
-// Create state table and fill with numbers
+// Creates state table and fills with numbers
 void createStateTable(char *stateTable, int nbStates) {
 	FillStateTable: for(int i = 0, temp = nbStates; i < nbStates; i++) {
 		stateTable[i] = temp++;	
 	}
 }
 
-// Create alphabet
+// Creates alphabet
 void createAlphabet(char *alphabet, int letters[], int numbers[], int nbStates) {
 	int tempSum = numbers[0];
 
@@ -22,7 +22,7 @@ void createAlphabet(char *alphabet, int letters[], int numbers[], int nbStates) 
 			tempSum += numbers[++j];
 		}
 		alphabet[i] = letters[j];
-		printf("%d\n",alphabet[i]);
+		//printf("%d\n",alphabet[i]);
 	}
 }
 // spread
@@ -46,7 +46,7 @@ void Next (int Next[],int numbers[], int numberofsymbols )
 	for ( int i = 0 ; i <numberofsymbols ; i++)
 	{
 		Next[i] = numbers[i]; // NO Difference between numbers
-		printf("%d\n",Next[i]);
+		//printf("%d\n",Next[i]);
 	}
 }
 
@@ -56,7 +56,7 @@ void TSymbol(int Tsymbol[] , char spread[] , int numberofstates)
 	for ( int i = 0 ; i < numberofstates ; i++)
 	{
 		Tsymbol[i] = spread[i];
-		printf("Tsymbols:%d\n", Tsymbol[i]);
+		//printf("Tsymbols:%d\n", Tsymbol[i]);
 	}
 }
 
@@ -65,7 +65,7 @@ void ReturningX (int X[],int Tsymbol[],int Next[],int numberofstates )
 	for ( int i = 0 ; i < numberofstates ; i++)
 	{
 		X[i] = Next[Tsymbol[i]]++;
-				printf(" X:%d\n",X[i]);
+				//printf(" X:%d\n",X[i]);
 	}
 }
 
@@ -75,7 +75,7 @@ void ReturningNbBits(int TabnbBits[],int X[], int numberofstates)
 	for ( int i = 0 ; i <numberofstates;i++)
 	{
 		TabnbBits[i] = R - floor(log2(X[i]));
-		printf("TabnbBits %d\n", TabnbBits[i]);
+		//printf("TabnbBits %d\n", TabnbBits[i]);
 	}
 
 }
@@ -86,7 +86,7 @@ void ReturningNewX(int ReturningNewX[],int TabnbBits[], int X[], int numberofsta
 	for ( int i = 0 ; i < numberofstates; i++)
 	{
 		ReturningNewX[i] = (X[i] << TabnbBits[i]) ;
-		printf(" NewX%d\n",ReturningNewX[i]);
+		//printf(" NewX%d\n",ReturningNewX[i]);
 	}
 
 }
@@ -94,7 +94,7 @@ void ReturningNewX(int ReturningNewX[],int TabnbBits[], int X[], int numberofsta
 void  DecodingSymbol(int *symbol, char spread[] , int indexofstate)
 {
 	*symbol = spread[indexofstate];
-	printf(" Decoded Symbol% d\n", *symbol);
+	//printf(" Decoded Symbol% d\n", *symbol);
 }
 // Calculating NextState
 void NextStateofDecoder(int *NextState,int NewXTab[], int NbBits[], char UseBits[],int indexofstate)
@@ -107,7 +107,7 @@ void NextStateofDecoder(int *NextState,int NewXTab[], int NbBits[], char UseBits
 	printf("%d\n", *NextState);
 	*NextState += NewXTab[indexofstate];
 	//printf("NewXTab %d", NewXTab[indexofstate]);
-	printf(" New State %d\n",*NextState);
+	//printf(" New State %d\n",*NextState);
 }
 // Flipping Bits given from Encoder
 void FlipingBits (int numberofBits)
@@ -120,7 +120,7 @@ void FlipingBits (int numberofBits)
 	{
 		
 		    		NewTab[i] = getc(des); // we are getting bits from fille
-		    		printf("%d\n", NewTab[i]);
+		    		//printf("%d\n", NewTab[i]);
 	}
 fclose(des);
 des_2 = fopen("Bits.txt","w");
@@ -128,10 +128,6 @@ des_2 = fopen("Bits.txt","w");
 	for(int i = 0; i < numberofBits; i++) {
 		Bits[numberofBits-i-1] = NewTab[i];
 	}
-	for( int i = 0; i <numberofBits ;  i++) {
-	            printf(" Zapisano %d\n",Bits[i]);
-	        }
-
 	for( int i = 0 ; i<numberofBits;i++)
 	{
 		putc(Bits[i],des);
@@ -140,7 +136,7 @@ des_2 = fopen("Bits.txt","w");
 fclose(des_2);
 }
 
-/////////////////////////// CORE OF DECOIDNG THE MOST IMPORTATNT FUNCTION THAT'S CALL OTHER FUNCTIONS ///////////
+/////////////////////////// CORE FUNCTION //////////////////////
 
 
 void DECODINGFUNCTION()
@@ -150,12 +146,11 @@ void DECODINGFUNCTION()
 		int  indexstate;
 	des_1 = fopen("state.txt", "r"); // We are opening state.txt, we need to get index of starting state
 		while (fscanf(des_1, "%d", &indexstate) != EOF);// We are getting stuff until file is ended
-		//printf(" indeks%d\n",indexstate);
 		fclose(des_1);
 	int numberofBits;
 	 des_2 = fopen ("numberofBits.txt", "r");
 		 while (fscanf(des_2, "%d", &numberofBits) != EOF);
-		 //printf(" Liczba bitów zakodowanych %d\n",numberofBits-1);
+		 //printf(" Liczba bitÃ³w zakodowanych %d\n",numberofBits-1);
 		 fclose(des_2);
 	 int numberofsymbols;
 		des_5 = fopen ("Nsymbols.txt", "r");
@@ -189,10 +184,6 @@ fclose(des_6);
 		    char alphabet[NbStates];
 			createAlphabet(&alphabet,letters,numbers,NbStates);
 			spread(&alphabet,numbers,NbStates);
-			for (int i = 0 ; i<NbStates;i++)
-				{
-					printf(" po spredzie %d\n",alphabet[i]);
-				}
 		    int nAlphabet = sizeof(alphabet)/sizeof(alphabet[0]);
 		    FlipingBits(numberofBits);
 
