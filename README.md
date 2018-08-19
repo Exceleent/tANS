@@ -11,4 +11,4 @@ Folder Encoder - Contains
 *main_test.c - example how use encoder
 *config - encoder reads data from this file. First column consist letters from our alphabet, range:0 - 255.
 Second column consist number of appearances for each letter.
-*symbols - 
+*symbols - first line 
