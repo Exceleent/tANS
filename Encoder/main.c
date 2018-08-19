@@ -9,9 +9,9 @@ void encode(int state, int states[], char tempBitsArray[][MAX_SYMBOLS], int lett
 	int i = 0;
 	
 	FILE *des , *des_2, *des_3;
-	des = fopen("/home/michal/Dekoder/Bits.txt","w");
-	des_2 = fopen("/home/michal/Dekoder/state.txt","w");
-	des_3 = fopen("/home/michal/Dekoder/numberofBits.txt","w");
+	des = fopen("/home/user/Decoder/Bits.txt","w");
+	des_2 = fopen("/home/user/Decoder/state.txt","w");
+	des_3 = fopen("/home/user/Decoder/numberofBits.txt","w");
 	int nStates = 0;
 
 	for(i = 0; i < nCount; i++) {
