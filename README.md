@@ -3,8 +3,8 @@
  
  
 This is C implementation of tANS algorithm.
-```
- Folder Encoder - Contains
+
+ # Folder Encoder - Contains
 
 *Core.h - declarations of functions.<br />
 *Core.c - definitions of functions.<br />
@@ -13,9 +13,8 @@ This is C implementation of tANS algorithm.
 *config - encoder reads data from this file. First column consist letters from our alphabet, range:0 - 255.( filled by you).<br />
 Second column consist number of appearances for each letter.<br />
 *symbols - first line consist starting state of encode then, sequence of symbols, we want to code.(filled by you).<br />
-```
-```
- Folder Decoder - Contains
+
+ # Folder Decoder - Contains
 *Bits.txt - sequence of bits we coded within our coder ( encoder fills it ).<br />
 *Core.c - definitions of functions.<br />
 *Core.h - declarations of functions .<br />
@@ -25,7 +24,6 @@ Second column consist number of appearances for each letter.<br />
 *numberofBits.txt - Number of Bits we coded ( encoder fills it ).<br />
 *state.txt - starting state for decoder, ending state for encoder(encoder fills it ).<br />
 *symbols.txt -  reversal sequence of decode symbols, and starting state for encoder.<br />
-```
 
 ## Compilation 
 Encoder:
