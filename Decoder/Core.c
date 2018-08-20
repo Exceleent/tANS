@@ -6,14 +6,13 @@
 #include <math.h>
 #include "Core.h"
 
-// Creates state table and fills with numbers
+
 void createStateTable(char *stateTable, int nbStates) {
 	FillStateTable: for(int i = 0, temp = nbStates; i < nbStates; i++) {
 		stateTable[i] = temp++;	
 	}
 }
 
-// Creates alphabet
 void createAlphabet(char *alphabet, int letters[], int numbers[], int nbStates) {
 	int tempSum = numbers[0];
 
@@ -25,7 +24,7 @@ void createAlphabet(char *alphabet, int letters[], int numbers[], int nbStates) 
 		//printf("%d\n",alphabet[i]);
 	}
 }
-// spread
+
 void spread(char alphabet[], int numbers[], int nbStates) {
 	int startPos = 0; // Starting position
 	int step = (nbStates / 8) + 3; // Step size
@@ -40,12 +39,11 @@ void spread(char alphabet[], int numbers[], int nbStates) {
 		startPos = (startPos + step) % nbStates;
 	}
 }
-/// Arrays required for Decoding
 void Next (int Next[],int numbers[], int numberofsymbols )
 {
 	for ( int i = 0 ; i <numberofsymbols ; i++)
 	{
-		Next[i] = numbers[i]; // NO Difference between numbers
+		Next[i] = numbers[i]; 
 		//printf("%d\n",Next[i]);
 	}
 }
@@ -90,7 +88,6 @@ void ReturningNewX(int ReturningNewX[],int TabnbBits[], int X[], int numberofsta
 	}
 
 }
-// Decoding symbol
 void  DecodingSymbol(int *symbol, char spread[] , int indexofstate)
 {
 	*symbol = spread[indexofstate];
@@ -109,7 +106,6 @@ void NextStateofDecoder(int *NextState,int NewXTab[], int NbBits[], char UseBits
 	//printf("NewXTab %d", NewXTab[indexofstate]);
 	//printf(" New State %d\n",*NextState);
 }
-// Flipping Bits given from Encoder
 void FlipingBits (int numberofBits)
 {
 	FILE *des , *des_2;
@@ -119,7 +115,7 @@ void FlipingBits (int numberofBits)
 	for(int i = 0 ; i<numberofBits; i++)
 	{
 		
-		    		NewTab[i] = getc(des); // we are getting bits from fille
+		    		NewTab[i] = getc(des); 
 		    		//printf("%d\n", NewTab[i]);
 	}
 fclose(des);
@@ -141,16 +137,14 @@ fclose(des_2);
 
 void DECODINGFUNCTION()
 {
-	/// We are getting starting state and sequence of bits from txt files
 	FILE *des_1 , *des_2 , *des_3 , *des_4 , *des_5 , *des_6;
 		int  indexstate;
-	des_1 = fopen("state.txt", "r"); // We are opening state.txt, we need to get index of starting state
-		while (fscanf(des_1, "%d", &indexstate) != EOF);// We are getting stuff until file is ended
+	des_1 = fopen("state.txt", "r"); 
+		while (fscanf(des_1, "%d", &indexstate) != EOF);
 		fclose(des_1);
 	int numberofBits;
 	 des_2 = fopen ("numberofBits.txt", "r");
 		 while (fscanf(des_2, "%d", &numberofBits) != EOF);
-		 //printf(" Liczba bitów zakodowanych %d\n",numberofBits-1);
 		 fclose(des_2);
 	 int numberofsymbols;
 		des_5 = fopen ("Nsymbols.txt", "r");
