@@ -1,5 +1,5 @@
 // Creating EncodingTables for tANS algorithm
-// MICHAL ZNALEZNIAK
+// MICHAL ZNALEZNIAK && SZYMON PULUT
 
 #include <stdio.h>
 #include <stdlib.h>
