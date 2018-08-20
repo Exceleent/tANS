@@ -6,7 +6,7 @@ This is C implementation of tANS algorithm.
 
 # Folder Encoder - Contains
 
-*Core.h - declarations of functions._
+*Core.h - declarations of functions.<br \>
 *Core.c - definitions of functions.
 *main.c - encoder function, which calls functions from Core.c.
 *main_test.c - example how use encoder
