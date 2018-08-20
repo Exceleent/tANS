@@ -204,8 +204,9 @@ fclose(des_6);
 		    ReturningNbBits(NbBits,X,nAlphabet);
 		    ReturningNewX(NewX,NbBits, X, nAlphabet);
 		    numberofBits--;
-for( numberofBits ; numberofBits>0;numberofBits+=(-NbBits[indexstate]))
+while( numberofBits>0)
 {
+			numberofBits+=(-NbBits[indexstate]);
 		    	for(i = 0 ; i<NbBits[indexstate];i++)
 		    	{
 		    		Bits[i] = getc(des_3)-48;
@@ -216,7 +217,6 @@ for( numberofBits ; numberofBits>0;numberofBits+=(-NbBits[indexstate]))
 					fprintf(des_4, "%d" , symbol);
 				    NextStateofDecoder( &NextState, NewX,  NbBits, Bits, indexstate);
 				    indexstate = NextState-NbStates;
-				    
 
 }
 fprintf(des_4," %d",NextState);
