@@ -2,7 +2,7 @@
  tANS - c implementation
  
  
-This is C implementation of tANS algorithm.
+This is C implementation of tANS algorithm. tANS is entropy coder from the ANS family, invented by Jarsoław Duda(http://th.if.uj.edu.pl/~dudaj/).
 
  # Folder Encoder - Contains
 
