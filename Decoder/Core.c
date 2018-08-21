@@ -103,7 +103,6 @@ void NextStateofDecoder(int *NextState,int NewXTab[], int NbBits[], char UseBits
 	}
 	printf("%d\n", *NextState);
 	*NextState += NewXTab[indexofstate];
-	//printf("NewXTab %d", NewXTab[indexofstate]);
 	//printf(" New State %d\n",*NextState);
 }
 void FlipingBits (int numberofBits)
