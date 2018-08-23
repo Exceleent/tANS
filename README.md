@@ -2,7 +2,13 @@
  tANS - c implementation
  
  
-This is C implementation of tANS algorithm. tANS is entropy coder from the ANS family, invented by Jarsoław Duda(http://th.if.uj.edu.pl/~dudaj/).
+This is C implementation of tANS Encoder and Decoder. ANS is family of entropy coding developed by Jarosław Duda (http://th.if.uj.edu.pl/~dudaj/). tANS constructs a finite state machine to operate on a large alphabet without using multiplication, that guarantee high quality of compression ration and low processing cost.
+
+
+# Example of generation of tANS tables for 3 size alphabet and 16 states
+![alt text](https://en.wikipedia.org/wiki/File:TANSex.png)
+
+
 
  # Folder Encoder - Contains
 
