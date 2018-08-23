@@ -7,7 +7,8 @@ This is C implementation of tANS Encoder and Decoder. ANS is family of entropy c
 
 # Example of generation of tANS tables for 3 size alphabet and 16 states
 ![tans](https://user-images.githubusercontent.com/42517471/44548795-624f7780-a71f-11e8-9f6e-b91802e8bdcc.png)
-Those tables we aply to stream decoding.
+
+As you can see, we generate couple of tables. Then we are applying them for stream decoding. With only one state and sequence of bits genereted by encoder, we are capable to decode information.
 
 # How to use our Coder/Encoder
 Remember that L :=2^n So sum of appearance of each symbol must be power of 2. In order to use encoder/decoder you must first fill up config filles.
