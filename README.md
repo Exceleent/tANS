@@ -10,7 +10,7 @@ This is C implementation of tANS Encoder and Decoder. ANS is family of entropy c
 Those tables we aply to stream decoding.
 
 # How to use our Coder/Encoder
-Remember that L :=2^n So sum of appearance of each symbol must b
+Remember that L :=2^n So sum of appearance of each symbol must be power of 2. In order to use encoder/decoder you must first fill up config filles.
 
 
  # Folder Encoder - Contains
@@ -34,8 +34,3 @@ Second column consist number of appearances for each letter.<br />
 *state.txt - starting state for decoder, ending state for encoder(encoder fills it ).<br />
 *symbols.txt -  reversal sequence of decode symbols, and starting state for encoder.<br />
 
-## Compilation 
-Encoder:
-to compile encoder, put in linux command line: gcc -std=c99 Core.c main.c main_test.c -lm -o "name".<br />
-Decoder:
-to compile decoder , put in linux command line: gcc -std=c99 Core.c test_bench.c -lm -o "name".<br />
