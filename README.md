@@ -6,8 +6,11 @@ This is C implementation of tANS Encoder and Decoder. ANS is family of entropy c
 
 
 # Example of generation of tANS tables for 3 size alphabet and 16 states
-![alt text](https://en.wikipedia.org/wiki/File:TANSex.png)
+![tans](https://user-images.githubusercontent.com/42517471/44548795-624f7780-a71f-11e8-9f6e-b91802e8bdcc.png)
+Those tables we aply to stream decoding.
 
+# How to use our Coder/Encoder
+Remember that L :=2^n So sum of appearance of each symbol must b
 
 
  # Folder Encoder - Contains
