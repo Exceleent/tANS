@@ -1,5 +1,5 @@
-# tANS
- tANS - c implementation
+# Asymmetric Numeral Systems - Tabled ANS
+ tANS - C implementation
  
  
 This is C implementation of tANS Encoder and Decoder. ANS is family of entropy coding developed by Jarosław Duda (http://th.if.uj.edu.pl/~dudaj/). tANS constructs a finite state machine to operate on a large alphabet without using multiplication, that guarantee high quality of compression ration and low processing cost.
