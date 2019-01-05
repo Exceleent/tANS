@@ -3,14 +3,17 @@
 #include <string.h>
 #include "Core.h"
 
+#define PATH_FILE_BITS "Bits"
+#define PATH_FILE_STATE "state"
+#define PATH_FILE_NOB "numberofBits"
 #define MAX_SYMBOLS 256
 
 void encode(int state, int states[], char tempBitsArray[][MAX_SYMBOLS], int letters[], int numbers[], int symbols[], size_t symbols_size, int nCount) {
 	int i = 0;
 	FILE *des , *des_2, *des_3;
-	des = fopen("/home/michal/TRYHARD/Decoder/Bits.txt","w");
-	des_2 = fopen("/home/michal/TRYHARD/Decoder/state.txt","w");
-	des_3 = fopen("/home/michal/TRYHARD/Decoder/numberofBits.txt","w");
+	des = fopen(PATH_FILE_BITS, "w");
+	des_2 = fopen(PATH_FILE_STATE,"w");
+	des_3 = fopen(PATH_FILE_NOB,"w");
 
 	int nStates = 0;
 
