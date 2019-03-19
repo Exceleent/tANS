@@ -10,7 +10,7 @@ This is C implementation of tANS Encoder and Decoder. ANS is family of entropy c
 As you can see, we generate couple of tables. Then we are applying them for stream decoding. With only one state and sequence of bits genereted by encoder, we are capable to decode information.
 
 # How to use our Coder/Encoder
-In order to know more about structure of the project and how coder/encoder exactly works please read our [how to use encoder](https://github.com/Exceleent/tANS/blob/master/docs/HowtoUse.txt) 
+In order to know more about structure of the project and how coder/encoder exactly works please read our [guidelines](https://github.com/Exceleent/tANS/blob/master/docs/HowtoUse.txt) 
 
 
  # Folder Encoder - Contains
