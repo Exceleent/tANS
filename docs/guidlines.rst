@@ -1,6 +1,9 @@
 ***********************
 Guidlines
 ***********************
+Remember that
+===============================
+Remember that L :=2^n So sum of appearance of each symbol must be power of 2. In order to use encoder/decoder you must first fill up config filles.
 
 What our project contains
 ===============================
@@ -26,6 +29,4 @@ Decoder file
 * state.txt - starting state for decoder, ending state for encoder(encoder fills it ).
 * symbols.txt - reversal sequence of decode symbols, and starting state for encoder.
 
-Remember that
-===============================
-Remember that $L :=2^n$ So sum of appearance of each symbol must be power of 2. In order to use encoder/decoder you must first fill up config filles.
+
