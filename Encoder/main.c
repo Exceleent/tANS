@@ -3,9 +3,9 @@
 #include <string.h>
 #include "Core.h"
 
-#define PATH_FILE_BITS "Bits"
-#define PATH_FILE_STATE "state"
-#define PATH_FILE_NOB "numberofBits"
+#define PATH_FILE_BITS "../Decoder/Bits.txt""
+#define PATH_FILE_STATE "../Decoder/state.txt"
+#define PATH_FILE_NOB "../Decoder/numberofBits.txt"
 #define MAX_SYMBOLS 256
 
 void encode(int state, int states[], char tempBitsArray[][MAX_SYMBOLS], int letters[], int numbers[], int symbols[], size_t symbols_size, int nCount) {
