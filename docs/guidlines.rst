@@ -1,2 +1,9 @@
-# How to use encoder
-first of all
+Section Title
+=============
+The Common Denominator
+======================
+
+Subsection Subtitle
+-------------------
+Titles and Section headers
+-------------------------
