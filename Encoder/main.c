@@ -3,7 +3,7 @@
 #include <string.h>
 #include "Core.h"
 
-#define PATH_FILE_BITS "../Decoder/Bits.txt""
+#define PATH_FILE_BITS "../Decoder/Bits.txt"
 #define PATH_FILE_STATE "../Decoder/state.txt"
 #define PATH_FILE_NOB "../Decoder/numberofBits.txt"
 #define MAX_SYMBOLS 256
