@@ -11,13 +11,12 @@ Encoder file
 * Core.c - definitions of functions.
 * main.c - encoder function, which calls functions from Core.c
 * main_test.c - example how use encoder.
-* config - encoder reads data from this file. First column consist letters from our alphabet, range:0 - 255.( filled by you).
-Second column consist number of appearances for each letter.
+* config - . First column consist letters from our alphabet, range:0 - 255(filled by you). Second column consist number of appearances.
 * symbols - first line consist starting state of encode then, sequence of symbols, we want to code.(filled by you).
 
 Decoder file
 -------------
-* Bits.txt - sequence of bits we coded within our coder ( encoder fills it ).
+* Bits.txt - sequence of bits we encoded within our coder ( encoder fills it ).
 * Core.c - definitions of functions.
 * Core.h - declarations of functions .
 * Nsymbols.txt - Alphabet size ( filled by you).
